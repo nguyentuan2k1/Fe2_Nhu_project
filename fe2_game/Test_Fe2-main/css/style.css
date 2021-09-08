@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.cover-all{
+    background: url('https://img4.thuthuatphanmem.vn/uploads/2020/12/26/anh-nen-nhat-ban-hoang-hon_125910670.jpg') no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    opacity: .7;
+    position: relative;
+    transition: all 5s ease;
+}
+.cover-game{
+    position: absolute;
+    bottom: 0.2%;
+    left: 0;
+    right: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background: white;
+    /* height: 1vh; */
+    /* line-height: 100%; */
+   
+}
+@keyframes ballfall {
+    0%{
+        top: 0vh;
+    }
+    100%{
+        top: 82.5vh;
+    }
+}
+
+.buble{
+    position: absolute;
+   text-align: center;
+   border-radius: 50%;
+   padding: 3.8vh 2.5vw;
+   box-shadow: 3px 3px rgba(0,0,0,.25);
+   background: #000;
+   color:white;
+   font-size: 1.75rem;
+   font-weight: bold;
+    animation-name: ballfall;
+    animation-duration: 10s;
+}
+
+.cover-setting{
+    position: absolute;
+    right: 0;
+    top: 30%;
+    width: 3.125rem;
+    background: linear-gradient(#f2709c,#ff9472);
+    border-radius: 0.375rem;
+  
+
+}
+.setting{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem 15% .5rem 15%;
+   
+   
+}
+.nutpause{
+    padding: 0px 0;
+    color:white;
+    background: linear-gradient(#aa4b6b,#6b6b83,#3b8d99); 
+     text-align: center;
+     font-size: 1rem;
+     padding: .3rem 0;
+     border-radius: 0.25rem;
+}
+@media screen and (max-width: 63.9375em)  { 
+    .cover-setting{
+        top: 10%;
+    }
+    .cover-cungten p{
+        display: none;
+    }
+    #input-text{
+        padding: 0.180rem ;
+    }
+    .cac-loai-cung .product-photo{
+        width: 100% !important;
+        height: 55% !important; 
+    }
+    .socungmua-cover{
+        font-size: 1rem !important;
+    }
+    .cac-loai-cung .price-cover{
+        font-size: 0.7rem !important;
+    }
+    .socungmua{
+        font-size: 0.7rem !important;
+    }
+    .buble{
+        padding: 1.5vh 1.75vw !important;
+    }
+    /* #mapid{
+        display: none;
+    }
+    .cover-map-mobile{
+        display: block;
+    } */
+  
+    /* CSS */
+    
+  }
+  .sao::after{
+    content: "";
+    position: inherit;
+    top: 0;
+    right: 0;
+    width: 2.5vw;
+    height: 5vh;
+    background: yellow;
+    clip-path: polygon(5% 25%, 34% 24%, 48% 0, 61% 23%, 92% 25%, 74% 41%, 91% 58%, 63% 57%, 51% 83%, 36% 59%, 8% 58%, 25% 40%);
+  }
+  .btn-resart{
+      width: 100%;
+      margin: .8vh 0;
+      background: linear-gradient(#aa4b6b,#6b6b83,#3b8d99); 
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: .5vh 0;
+
+  }
+  .cover-cungten{
+      display: flex;
+      align-items: center;
+      background: linear-gradient(#ff7e5f ,#feb47b);
+      border-radius: 50px;
+      margin-right: 30px;
+      padding: 0 5px;
+      color: tomato;
+      transition:  3s ease-in;
+      cursor: pointer;
+  }
+  #cb:checked ~ .cover-cungten{
+      background: linear-gradient(#56ab2f,#a8e063);
+  }
+  /* store */
+  .cover-store{
+      display: none; 
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+        background: rgba(0, 0, 0, 0.938);
+      padding: 10% 15%;
+      opacity: 1;
+  }
+  .store-container{
+      position: relative;
+      background: white;
+      padding:1vh  1vw;
+      z-index: 22 ;
+      /* animation:  store-open  1s ease-in-out; */
+  }
+  @keyframes store-open {
+    0%{
+        top: -30%;
+    }
+    100%{
+        top: 0;
+    }
+  }
+
+  .cover-danh-sach-type-cung-ten{
+      display: flex;
+      justify-content: space-around;
+
+  }
+  .cac-loai-cung{
+      width: 30%;
+      text-align: center;
+      border: 1px solid blue;
+  }
+  .store-modal{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9;
+
+  }
+#store-cb:checked ~  .cover-store{
+      display: block;
+  }
+  .store-header{
+      font-size: 1.75rem;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      /* text-shadow: 3px 3px rgba(0,0,0,.25); */
+      color: black;
+      background: linear-gradient(rgb(63, 228, 58),rgb(90, 235, 126),rgb(9, 165, 92) ) ;
+  }
+  .cac-loai-cung{
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 47%;
+    padding: 0.3125rem 1.25rem;
+    text-align: center;
+  }
+  .cac-loai-cung .product-photo{
+    border: 0.3125rem solid rgb(238, 240, 124);
+    border-radius: 50%;
+  }
+  .socungmua{
+    color: #e06716;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.9375rem 0;
+    display: inline-block;
+  }
+  .store-body{
+      background: linear-gradient(rgb(186, 248, 240),rgb(226, 206, 206));
+      padding: 0.625rem;
+  }
+  .socungmua-cover{
+    font-weight: bold;
+    font-size: 1.25rem
+  }
+  .price-cover{
+    font-weight: bold; 
+    font-size: 1.12500rem;
+  }
+  #change{
+      padding: 0.3125rem;
+      border-radius: 0.3125rem;
+      color: white;
+      background: linear-gradient(#f37f21, #f76565);
+  }
+  .change{
+      padding-right: 0.3125rem;
+  }
